@@ -63,12 +63,18 @@
     <Compile Include="RatingModels\CreateRating.cs" />
     <Compile Include="RatingModels\RatingListItem.cs" />
     <Compile Include="ShowModels\CreateShow.cs" />
+    <Compile Include="ShowModels\ShowDetail.cs" />
     <Compile Include="ShowModels\ShowListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRater.Data\MovieRater.Data.csproj">
+      <Project>{E6045D57-59E4-48DA-8FF4-EE891F2D5098}</Project>
+      <Name>MovieRater.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
