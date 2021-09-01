@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Models.GenreModles
 {
-    class GenreCreate
+    public class GenreCreate
     {
+        public int GenreID { get; set; }
+
+        public string GenreName { get; set; }
     }
 }

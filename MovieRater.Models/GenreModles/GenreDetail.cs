@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Models.GenreModles
 {
-    class GenreDetail
+    public class GenreDetail //look up one genre and what's in it.
     {
+        public int GenreID { get; set; }
+
+        public string GenreName { get; set; }
     }
 }
