@@ -13,6 +13,7 @@ namespace MovieRater.Data
         [Key] 
         public int RatingID { get; set; }
         public Guid OwnerID { get; set; }
+
         public double RatingStar { get; set; }
         public string Comment { get; set; }
 
