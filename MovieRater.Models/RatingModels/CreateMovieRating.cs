@@ -1,5 +1,4 @@
-﻿using MovieRater.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Models.RatingModels
 {
-    public class RatingListItem
+    public class CreateMovieRating
     {
-        [Required]
         public int MovieID { get; set; }
-        public List<Rating> Ratings { get; set; }
-        public string Title { get; set; }
+
+        [Required, Range(0, 5)]
+        public double RatingStar { get; set; }
+        public string Comment { get; set; }
     }
 }
