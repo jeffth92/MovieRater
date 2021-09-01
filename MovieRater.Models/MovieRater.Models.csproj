@@ -64,6 +64,7 @@
     <Compile Include="RatingModels\CreateShowRating.cs" />
     <Compile Include="RatingModels\RatingListItem.cs" />
     <Compile Include="ShowModels\CreateShow.cs" />
+    <Compile Include="ShowModels\ShowDetail.cs" />
     <Compile Include="ShowModels\ShowListItem.cs" />
   </ItemGroup>
   <ItemGroup>
