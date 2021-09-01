@@ -64,5 +64,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRater.Data\MovieRater.Data.csproj">
+      <Project>{e6045d57-59e4-48da-8ff4-ee891f2d5098}</Project>
+      <Name>MovieRater.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieRater.Models\MovieRater.Models.csproj">
+      <Project>{0883492b-5bc7-4844-82dc-08b5a1ea6a1a}</Project>
+      <Name>MovieRater.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
