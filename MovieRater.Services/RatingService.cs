@@ -71,5 +71,25 @@ namespace MovieRater.Services
                 return query.ToArray();
             }
         }
+        public IEnumerable<RatingListItem> GetRatingsByShowID(int showId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Ratings
+                        .Where(e => e.ShowID == showId)
+                        .Select(
+                            e =>
+                                new RatingListItem
+                                {
+                                    MovieID = e.ShowID,
+                                    Ratings = new List<Rating>(),
+                                    Title = e.Show.Title
+                                }
+                        );
+                return query.ToArray();
+            }
+        }
     }
 }
