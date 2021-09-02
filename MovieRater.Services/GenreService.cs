@@ -23,7 +23,6 @@ namespace MovieRater.Services
                 new Genre()
                 {
                     OwnerID = _userID,
-                    GenreID = model.GenreID,
                     GenreName = model.GenreName
                 };
 
@@ -34,19 +33,21 @@ namespace MovieRater.Services
             }
         }
 
-        public IEnumerable<GenreDetail> GetGenreByName(int GenreName) //once used GenreID, but was swapped to GenreName for ease of search
+        public IEnumerable<GenreDetail> GetGenreByName(int genreID) //once used GenreID, but was swapped to GenreName for ease of search
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Genres
-                        .Where(e => e.OwnerID == _userID)
+                        .Where(e => e.GenreID == genreID)
                         .Select(
                             e =>
                                 new GenreDetail
                                 {
-                                    GenreName = e.GenreName
+                                    GenreName = e.GenreName,
+                                    Shows = new List<Show>(),
+                                    Movies = new List<Movie>()
                                 }
                         );
                 return query.ToArray();
