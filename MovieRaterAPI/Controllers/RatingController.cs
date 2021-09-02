@@ -41,7 +41,19 @@ namespace MovieRaterAPI.Controllers
 
             var service = CreateRatingService();
 
-            if (!service.CreateRating(rating))
+            if (!service.CreateMovieRating(rating))
+                return InternalServerError();
+
+            return Ok();
+        }
+        public IHttpActionResult Post(CreateShowRating rating)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateRatingService();
+
+            if (!service.CreateShowRating(rating))
                 return InternalServerError();
 
             return Ok();
