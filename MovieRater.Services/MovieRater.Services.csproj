@@ -66,11 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieRater.Data\MovieRater.Data.csproj">
-      <Project>{E6045D57-59E4-48DA-8FF4-EE891F2D5098}</Project>
+      <Project>{e6045d57-59e4-48da-8ff4-ee891f2d5098}</Project>
       <Name>MovieRater.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\MovieRater.Models\MovieRater.Models.csproj">
-      <Project>{0883492B-5BC7-4844-82DC-08B5A1EA6A1A}</Project>
+      <Project>{0883492b-5bc7-4844-82dc-08b5a1ea6a1a}</Project>
       <Name>MovieRater.Models</Name>
     </ProjectReference>
   </ItemGroup>

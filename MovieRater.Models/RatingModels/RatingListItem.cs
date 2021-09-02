@@ -10,8 +10,10 @@ namespace MovieRater.Models.RatingModels
 {
     public class RatingListItem
     {
-        [Required]
+        
         public int MovieID { get; set; }
+        public int ShowID { get; set; }
+
         public List<Rating> Ratings { get; set; }
         public string Title { get; set; }
     }
