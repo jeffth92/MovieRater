@@ -8,8 +8,6 @@ namespace MovieRater.Models.GenreModles
 {
     public class GenreCreate
     {
-        public int GenreID { get; set; }
-
         public string GenreName { get; set; }
     }
 }
