@@ -16,11 +16,11 @@ namespace MovieRater.Data
         public string GenreName { get; set; }
 
         [ForeignKey(nameof(Movie))]
-        public int MovieID { get; set; }
+        public int? MovieID { get; set; }
         public virtual Movie Movie { get; set; }
 
         [ForeignKey(nameof(Show))]
-        public int ShowID { get; set; }
+        public int? ShowID { get; set; }
         public virtual Show Show { get; set; }
     }
 }

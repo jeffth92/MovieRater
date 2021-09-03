@@ -17,7 +17,7 @@ namespace MovieRater.Services
             _userID = userID;
         }
 
-        public bool CreateGenre(GenreCreate model)
+        public bool CreateGenre(GenreCreate model) //broke
         {
             var entity =
                 new Genre()
