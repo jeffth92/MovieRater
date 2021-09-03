@@ -26,15 +26,15 @@ namespace MovieRaterAPI.Controllers
             var rating = ratingService.GetRatingsByMovieID(movieID);
             return Ok(rating);
         }
-        [Route("api/rating/{showID}")]
-        public IHttpActionResult GetShow(int showID)
-        {
-            RatingService ratingService = CreateRatingService();
-            var rating = ratingService.GetRatingsByShowID(showID);
-            return Ok(rating);
-        }
+        //[Route("api/rating/{showID}")]
+        //public IHttpActionResult GetShow(int showID)
+        //{
+        //  RatingService ratingService = CreateRatingService();
+        //   var rating = ratingService.GetRatingsByShowID(showID);
+        //   return Ok(rating);
+        //}
 
-        public IHttpActionResult Post(CreateMovieRating rating)
+        /*public IHttpActionResult Post(CreateMovieRating rating)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -57,6 +57,6 @@ namespace MovieRaterAPI.Controllers
                 return InternalServerError();
 
             return Ok();
-        }
+        }*/
     }
 }
